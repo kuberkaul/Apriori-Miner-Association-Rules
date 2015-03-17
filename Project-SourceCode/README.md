@@ -1,14 +1,13 @@
-**********************************README*********************************
-
 Files present:
-1) "kk2872-proj3" zipped Project folder
-2) README File in the main project folder
-3) Example-run.txt in the main project folder
-4) Makefile in the main project folder
-5) Integrated Dataset CSV file in the "src" folder
-6) "output.txt" will be created in "src" folder that will have large-item sets and high-confidence rules
 
-File/Directory Listing
+1. "kk2872-proj3" zipped Project folder
+2. README File in the main project folder
+3. Example-run.txt in the main project folder
+4. Makefile in the main project folder
+5. Integrated Dataset CSV file in the "src" folder
+6. "output.txt" will be created in "src" folder that will have large-item sets and high-confidence rules
+
+*File/Directory Listing*
 	README - This file.
 	AprioriMiner.java - Source code for the project. Includes runnable main method and all code for the project.
 	Makefile - Builds the project.
@@ -16,12 +15,12 @@ File/Directory Listing
 	INTEGRATED-DATASET.csv - The dataset chosen to derive the high-confidence rules from.
 	output.txt - Produces the output of large item sets and high-confidence rules.
 
-How to Build the Program
+*How to Build the Program*
 	Extract all files in a directory.
 	Follow instructions in Makefile.
 	The bin directory should be populated with .class files after the "javac AprioriMiner.java" command.
 
-How to Run the Program
+*How to Run the Program*
 	
 	The way to run the program is to follow the instructions in the Makefile using the following syntax:
 	
@@ -32,11 +31,11 @@ Where support is the support threshold from 0 to 1 and confidence is the coverag
 
 	
 
-Design
+*Design*
 
 	Our project is fully contained in the AprioriMiner.java class. The command line arguments are accepted and calls to various various methods are made. We have used a programming construct that is 	pretty simplistic without any complications to understand the code.
 		
-Description of Part 1 Design (Dataset and its Interestingness)
+*Description of Part 1 Design (Dataset and its Interestingness)*
 
 We have used the Graffiti Locations dataset currently available in the NYC open-data (https://data.cityofnewyork.us/browse?limitTo=datasets) at https://data.cityofnewyork.us/Other/Graffiti-Locations/2j99-6h29 to generate our INTEGRATED-DATASET.csv for deriving the high association rules from it. The dataset gives us the Addresses, current status, and coordinates of requests to clean graffiti (other than bridges or highways) received from the public and SCOUT in the last 12 months.
 
@@ -50,7 +49,7 @@ Through generating these confidence rules, we can determine which Boroughs have 
 2. http://www.livescience.com/7599-graffiti-triggers-crime-littering.html - Live Science reported a direct triggering of crime and littering in the locations where maximum number of graffiti locations are found.
 3. http://www.spindrift.org/graffiti.pdf - A recent paper was written which researched into the direct correlation of crime and graffiti and proved that the control of graffiti art in locations actually reduced the crime by a percentage hence reinforcing the fact that there is a correlation between crime and graffiti. 
 
-According to the example-run.txt file that we produced, some of the rules clearly infer that:
+*According to the example-run.txt file that we produced, some of the rules clearly infer that:*
 
 1. [Open, BROOKLYN] ==> [Site downloaded for cleaning] (Conf: 53.41880341880342%, Supp: 4.3047041807287005%) - The rule clearly describes that almost 50% times that the status of a graffiti location is open then it is in Brooklyn area. It also describes that in such a condition site is downloaded for cleaning.
 
@@ -66,7 +65,7 @@ According to the example-run.txt file that we produced, some of the rules clearl
 Hence most of the graffiti locations with status open i.e. not yet resolved are found in Brooklyn and Bronx and the most number of Forever Graffiti Free Form are sent there.
 
 
-Now to finally prove the correctness of the rules that we inferred, we did research into the crime rates/homicide rates in New York and found that our rules were strongly supported by the official crime rates given by:
+*Now to finally prove the correctness of the rules that we inferred, we did research into the crime rates/homicide rates in New York and found that our rules were strongly supported by the official crime rates given by:*
 
 1. NY Times - http://projects.nytimes.com/crime/homicides/map
 The study clearly states that the maximum numbers of homicides are reported in Brooklyn and Bronx for New York area and this has been clearly inferred from the rules that we derived from the graffiti locations.
@@ -94,7 +93,7 @@ The project primarily comprises of the following class files:
 3.It mainly has functions for generating sets for confidence keeping in mind the min_conf.
 4. We read the CSV file, store the itemsets in hashmaps (for mapping the set of words in a large item set with its count) and calculate the support for each of them. We further prune down the item sets with those satisfying the minSupport. 
 
-Command Line specification:
+*Command Line specification:*
 
 You must specify the minimum support and minimum confidence along with the CSV file (INTEGRATED-DATASET.csv).
 
