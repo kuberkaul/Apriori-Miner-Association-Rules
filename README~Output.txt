@@ -1,19 +1,6 @@
 **********************************README*********************************
 
-
-COMS E6111 Fall 2012
-
-Kuber Kaul
-kk2872@columbia.edu
-
-Harshil Gandhi
-hmg2138@columbia.edu
-
-*************************************************************************
-
-Project 3
-
-Files Submitted:
+Files present:
 1) "kk2872-proj3" zipped Project folder
 2) README File in the main project folder
 3) Example-run.txt in the main project folder
@@ -115,4 +102,4 @@ Most Interesting example run:
 Run as <INTEGRATED-DATASET.csv> <0.07> <0.1>
 
 The reason for it being interesting is explained above in the 4 points and the paragraph that follows these points.
-//End of File
+
